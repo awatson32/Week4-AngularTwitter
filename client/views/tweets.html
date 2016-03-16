@@ -11,8 +11,12 @@
         </div>
     </div>
 
-    <div id="posts-container">
-        <ul class="posts">
-        </ul>
-    </div>
+
+<div ng-controller="TweetController" class="posts-container">
+    <ul ng-repeat="username in messages">
+        {{username.user}}
+        <li ng-repeat="message in messages">
+            {{message.text}}
+        </li>
+    </ul>
 </div>
