@@ -1,5 +1,13 @@
-var app = angular.module('myApp', ['myApp.controllers', 'ngroute']);
-app.config(['$routeProvider', function($routeProvider) {
+angular.module('myApp', ['myApp', 'ngroute'])
+.controller('MainController', ['$scope', function($scope) {
+    $scope.welcomeMessage = 'Hello World!'; 
+    console.log("This part is working!")  
+}])
+.controller('TweetController', ['$scope', function($scope) {
+    
+}])
+
+.config(['$routeProvider', function($routeProvider) {
     $routeProvider
     .when('/welcome', {
         templateUrl: 'views/welcome.html',
@@ -10,3 +18,4 @@ app.config(['$routeProvider', function($routeProvider) {
         controller: 'TweetController'
     });
 }]);
+
