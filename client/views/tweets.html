@@ -11,10 +11,10 @@
 
 
 <div ng-controller="TweetController" class="posts-container">
-    <ul ng-repeat="username in messages">
+    <ul ng-repeat="username in tweets">
         @ {{username.user}}
-        <li ng-repeat="message in messages">
-            {{message.text}}
+        <li ng-repeat="tweet in tweets">
+            {{tweet.text}}
         </li>
     </ul>
 </div>
