@@ -1,11 +1,7 @@
-<h1>{{ welcomeMessage }}</h1>
-<h2> Welcome to this page </h2>
+<div  ng-controller="MainController" class="form-group">
+    <form name="form" ng-submit="login()">
+        <input type="text" class="form-control" id="userName" placeholder="Username">
+        <button type="submit" class="btn btn-default">Sign in</button>
+    </form>
+</div>
 
-
-<form>
-  <div class="form-group">
-    <label for="userName">Username</label>
-    <input type="text" class="form-control" id="userName" placeholder="Username">
-  </div>
-  <button type="submit" class="btn btn-default">Sign in</button>
-</form>
